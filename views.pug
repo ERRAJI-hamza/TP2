@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Registration and Authentication
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css")
+
+  body(class="bg-gray-100 h-screen flex justify-center items-center")
+    div(class="w-100 h-screen flex flex-col justify-center items-center ")
+      form(action="/login" method="post" class="w-96 bg-white border-2 border-gray-300 p-6 rounded-lg flex flex-col gap-5")
+        div(class="brand flex justify-center items-center gap-1.5")
+          p(class="text-2xl font-bold") Authentification
+
+        input(type="text" name="userName" placeholder="username" class="p-3 border border-gray-300 rounded focus:border-black")
+        input(type="password" name="password" placeholder="password" class="p-3 border border-gray-300 rounded focus:border-black")
+        button(type="submit" class="bg-blue-500 text-black font-bold p-3 rounded cursor-pointer") Connecte
+
+        span(class="text-gray-600 text-sm")
+          | Already have an account? 
+          a(href="/register-user" class="text-blue-500 font-bold") Register
